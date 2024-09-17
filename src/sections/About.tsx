@@ -216,7 +216,7 @@ export const AboutSection = () => {
               <ToolboxItems
                 items={frontendTools}
                 className=""
-                itemsWrapperClassname="animate-move-left [animation-duration:30s]"
+                itemsWrapperClassname="animate-move-left [animation-duration:30s] "
               />
               <ToolboxItems
                 items={backendTools}
