@@ -58,7 +58,7 @@ export const HeroSection = () => {
           shouldOrbit
           orbitDuration="40s"
           shouldSpin
-          spinDuration="6s"
+          spinDuration="10s"
         >
           <StarIcon className="size-12 text-emerald-300" />
         </HeroOrbit>
@@ -82,7 +82,7 @@ export const HeroSection = () => {
           shouldOrbit
           orbitDuration="100s"
           shouldSpin
-          spinDuration="10s"
+          spinDuration="20s"
         >
           <SparkleIcon className="size-14 text-emerald-300/20" />
         </HeroOrbit>
