@@ -1,27 +1,99 @@
 "use client"
 
+import BootstrapIcon from "@/assets/icons/bootstrap.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import CssIcon from "@/assets/icons/css3.svg";
-import GithubIcon from "@/assets/icons/github.svg";
+import DjangoIcon from "@/assets/icons/django.svg";
+import DockerIcon from "@/assets/icons/docker.svg";
+import ExpressIcon from "@/assets/icons/express.svg";
+import GitIcon from "@/assets/icons/git.svg";
+import GoogleIcon from "@/assets/icons/google.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
+import JavaIcon from "@/assets/icons/java.svg";
+import MongodbIcon from "@/assets/icons/mongodb.svg";
+import MysqlIcon from "@/assets/icons/mysql.svg";
+import NodeIcon from "@/assets/icons/node.svg";
+import OpenaiIcon from "@/assets/icons/openai.svg";
+import PandasIcon from "@/assets/icons/pandas.svg";
+import PostgresqlIcon from "@/assets/icons/postgresql.svg";
+import PythonIcon from "@/assets/icons/python.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
-import bookImage from "@/assets/images/book-cover.png";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
+import TypescriptIcon from "@/assets/icons/typescript.svg";
+import ZustandIcon from "@/assets/icons/zustand.svg";
+
+import bookImage from "@/assets/images/book.png";
 import mapImage from "@/assets/images/map2.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { Card } from "@/components/Card";
 import CardHeader from "@/components/CardHeader";
 import SectionHeader from "@/components/SectionHeader";
 import ToolboxItems from "@/components/ToolboxItems";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
-const toolsboxItems = [
+const backendTools = [
+  {
+    title: "Python",
+    iconType: PythonIcon,
+  },
+  {
+    title: "Java",
+    iconType: JavaIcon,
+  },
   {
     title: "JavaScript",
     iconType: JavascriptIcon,
   },
+  {
+    title: "MySQL",
+    iconType: MysqlIcon,
+  },
+  {
+    title: "PostgreSQL",
+    iconType: PostgresqlIcon,
+  },
+  {
+    title: "MongoDB",
+    iconType: MongodbIcon,
+  },
+  {
+    title: "Django",
+    iconType: DjangoIcon,
+  },
+  {
+    title: "Node.js",
+    iconType: NodeIcon,
+  },
+  {
+    title: "Express.js",
+    iconType: ExpressIcon,
+  },
+  {
+    title: "Git",
+    iconType: GitIcon,
+  },
+  {
+    title: "Pandas",
+    iconType: PandasIcon,
+  },
+  {
+    title: "Docker",
+    iconType: DockerIcon,
+  },
+  {
+    title: "Google APIs",
+    iconType: GoogleIcon,
+  },
+  {
+    title: "OpenAI APIs",
+    iconType: OpenaiIcon,
+  },
+];
+
+const frontendTools = [
   {
     title: "HTML5",
     iconType: HTMLIcon,
@@ -31,53 +103,75 @@ const toolsboxItems = [
     iconType: CssIcon,
   },
   {
+    title: "JavaScript",
+    iconType: JavascriptIcon,
+  },
+  {
+    title: "TypeScript",
+    iconType: TypescriptIcon,
+  },
+  {
     title: "React",
     iconType: ReactIcon,
+  },
+  {
+    title: "Zustand",
+    iconType: ZustandIcon,
+  },
+  {
+    title: "Bootstrap",
+    iconType: BootstrapIcon,
+  },
+  {
+    title: "Tailwind CSS",
+    iconType: TailwindIcon,
   },
   {
     title: "Chrome",
     iconType: ChromeIcon,
   },
-  {
-    title: "Github",
-    iconType: GithubIcon,
-  },
 ];
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
-    left: "5%",
+    title: "Cinema",
+    emoji: "🎬",
+    left: "7%",
     top: "5%",
   },
   {
-    title: "Photography",
-    emoji: "📸",
-    left: "50%",
+    title: "Writing",
+    emoji: "✍️",
+    left: "45%",
     top: "5%",
   },
   {
-    title: "Hiking",
+    title: "Travel",
     emoji: "🏔️",
-    left: "35%",
-    top: "40%",
+    left: "40%",
+    top: "35%",
   },
   {
-    title: "Gaming",
+    title: "Video Game",
     emoji: "🎮",
     left: "10%",
     top: "35%",
   },
   {
-    title: "Music",
-    emoji: "🎶",
-    left: "70%",
-    top: "45%",
+    title: "Geopolitics",
+    emoji: "🌏",
+    left: "65%",
+    top: "35%",
   },
   {
-    title: "Fitness",
-    emoji: "🏋️‍♀️",
+    title: "History",
+    emoji: "🏛️",
+    left: "73%",
+    top: "5%",
+  },
+  {
+    title: "Macroeconomics",
+    emoji: "💹",
     left: "5%",
     top: "65%",
   },
@@ -85,7 +179,7 @@ const hobbies = [
     title: "Reading",
     emoji: "📖",
     left: "45%",
-    top: "70%",
+    top: "65%",
   },
 ];
 
@@ -98,7 +192,7 @@ export const AboutSection = () => {
         <SectionHeader
           eyebrow="About Me"
           title="A Glimpse Into My World"
-          description="Learn more about who I am, what I do, and what inspires me"
+          description="More about what I do, and what inspires me"
         />
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
@@ -108,24 +202,24 @@ export const AboutSection = () => {
                 description="Explore the books shaping my perspectives."
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book cover" />
+                <Image className="" src={bookImage} alt="Book cover" />
               </div>
             </Card>
 
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="My Toolbox"
-                description="Explore the technologies and tools I use to craft exceptional
+                description="Technologies and tools I use to turn ideas into
               digital experiences."
                 className=""
               />
               <ToolboxItems
-                items={toolsboxItems}
+                items={frontendTools}
                 className=""
                 itemsWrapperClassname="animate-move-left [animation-duration:30s]"
               />
               <ToolboxItems
-                items={toolsboxItems}
+                items={backendTools}
                 className="mt-6"
                 itemsWrapperClassname="animate-move-right [animation-duration:15s]"
               />
@@ -136,7 +230,7 @@ export const AboutSection = () => {
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Beyond the Code"
-                description="Explore my interests and hobbies beyond the digital realm."
+                description="My interests and hobbies beyond the software realm."
                 className="px-6 py-6"
               />
               <div className="relative flex-1" ref={constraintRef}>
