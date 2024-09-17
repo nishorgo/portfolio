@@ -1,12 +1,14 @@
-import cocreateLandingPage from "@/assets/images/cocreate.png";
 import findnestLandingPage from "@/assets/images/findnest.png";
+import cocreateLandingPage from "@/assets/images/cocreate.png";
 import gamedbLandingPage from "@/assets/images/gamedb.png";
 import snakeMockup from "@/assets/images/snake.png";
 
+import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import { Card } from "@/components/Card";
-import SectionHeader from "@/components/SectionHeader";
+import grainImage from "@/assets/images/grain.jpg";
 import Image from "next/image";
+import SectionHeader from "@/components/SectionHeader";
+import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -86,7 +88,7 @@ export const ProjectsSection = () => {
         <SectionHeader
           eyebrow="Real-world Results"
           title="Featured Projects"
-          description="See I how transformed concepts into engaging digital experiences."
+          description="See how I transformed concepts into engaging digital experiences."
         />
         <div className="mt-10 md:mt-20 flex flex-col gap-20">
           {portfolioProjects.map((project, projectIndex) => (
