@@ -3,14 +3,14 @@ import { Fragment } from "react";
 
 const words = [
   "Performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
+  "Attention to Detail",
+  "Secured",
+  "Innovative",
   "Scalable",
   "User Friendly",
   "Responsive",
   "Maintainable",
-  "Search Optimized",
+  "Compatible",
   "Usable",
   "Reliable"
 ];
