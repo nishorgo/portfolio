@@ -7,7 +7,7 @@ import HTMLIcon from "@/assets/icons/html5.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import bookImage from "@/assets/images/book-cover.png";
-import mapImage from "@/assets/images/map.png";
+import mapImage from "@/assets/images/map2.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { Card } from "@/components/Card";
 import CardHeader from "@/components/CardHeader";
