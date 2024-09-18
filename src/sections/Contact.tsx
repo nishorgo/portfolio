@@ -1,7 +1,26 @@
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+"use client";
+
+import CopyIcon from "@/assets/icons/copy.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import Confetti from "react-confetti";
+import { useState } from "react";
 
 export const ContactSection = () => {
+  const [copied, setCopied] = useState(false);
+  const email = "abidhasan.bh@outlook.com";
+
+  const copyToClipboard = () => {
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 3000);
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  };
+
   return (
     <div className="py-16 pt-12 lg:py-24 lg:pt-20">
       <div className="container">
@@ -21,14 +40,26 @@ export const ContactSection = () => {
               </p>
             </div>
             <div>
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                <a
-                  href="mailto:abidhasan.bh@outlook.com"
-                  className="font-semibold"
-                >
-                  Contact Me
-                </a>
-                <ArrowUpRightIcon className="size-4" />
+              <button
+                className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900"
+                onClick={copyToClipboard}
+              >
+                {copied ? (
+                  <>
+                    <Confetti
+                      width={900}
+                      height={300}
+                      numberOfPieces={500}
+                      recycle={false}
+                    />
+                    <span className="font-semibold">Copied!!</span>
+                  </>
+                ) : (
+                  <>
+                    <CopyIcon className="size-4 fill-white" />
+                    <span className="font-semibold">Copy Email</span>
+                  </>
+                )}
               </button>
             </div>
           </div>
