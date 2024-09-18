@@ -14,7 +14,7 @@ export const ContactSection = () => {
       .writeText(email)
       .then(() => {
         setCopied(true);
-        setTimeout(() => setCopied(false), 3000);
+        setTimeout(() => setCopied(false), 4000);
       })
       .catch((err) => {
         console.error("Failed to copy: ", err);
