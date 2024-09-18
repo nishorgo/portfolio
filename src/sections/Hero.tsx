@@ -124,23 +124,23 @@ export const HeroSection = () => {
             Building Fullstack Software Solutions
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Hi, I&apos;m Nishorgo. I specialize in transforming ideas into functional,
-            high-performing web and mobile applications.
+            Hi, I&apos;m Nishorgo. I specialize in transforming ideas into
+            functional, high-performing web and mobile applications.
           </p>
         </div>
 
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <a href="#projects" className="font-semibold">
-              Explore My Work
-            </a>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <a href="#contact" className="font-semibold">
-              Lets Connect
-            </a>
-          </button>
+          <a href="#projects">
+            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowDown className="size-4" />
+            </button>
+          </a>
+          <a href="#contact">
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+              <span className="font-semibold">Lets Connect</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>
