@@ -1,4 +1,5 @@
 import findnestLandingPage from "@/assets/images/findnest.png";
+import schoolyLandingPage from "@/assets/images/schooly.png";
 import cocreateLandingPage from "@/assets/images/cocreate.png";
 import gamedbLandingPage from "@/assets/images/gamedb.png";
 import snakeMockup from "@/assets/images/snake.png";
@@ -24,6 +25,24 @@ const portfolioProjects = [
     ],
     code: "https://github.com/nishorgo/findnest",
     image: findnestLandingPage,
+  },
+  {
+    company: "Schooly",
+    year: "",
+    title: "School management platform",
+    results: [
+      { title: "✦ Role-based dashboard and access management for all stakeholders" },
+      {
+        title:
+          "✦ Calendar scheduling for teachers and students with notifications",
+      },
+      {
+        title:
+          "✦ Management for class, exam, attendance, result, event, etc.",
+      },
+    ],
+    code: "https://github.com/nishorgo/schooly",
+    image: schoolyLandingPage
   },
   {
     company: "Co-Create",
